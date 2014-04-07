@@ -1,0 +1,35 @@
+#logo {
+  float: left;
+  padding: 20px;
+}
+
+#header {
+  position: relative;
+  width: 50em;
+  height: 100px;
+  margin: 0 auto 0 auto;
+  white-space: nowrap;
+  ul {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    li {
+      display: inline;
+      list-style-type: none;
+      a {
+        padding: 3px 10px;
+        color: white;
+      }
+      a:link,#navigation a:visited {
+        color: white;
+        background-color: #036;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+        background-color: #369;
+        text-decoration: none;
+      }
+    }
+  }
+}

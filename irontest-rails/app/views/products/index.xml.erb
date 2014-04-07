@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products type="array">
+<% @products.each do |product| %>
+  <product>
+    <id><%= product.id %></id>
+    <name><%= product.name %></name>
+    <description><%= product.description %></description>
+    <status><%= product.passing %>/<%= product.test_cases.count %> passing</status>
+  </product>
+<% end %>
+</products>
+

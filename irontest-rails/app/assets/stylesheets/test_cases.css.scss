@@ -1,0 +1,27 @@
+// Place all the styles related to the TestCases controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.test-case-info {
+  width: 100%;
+  border: 1px solid gray;
+  margin: 1em 0 1em 0;
+  tr {
+    td:nth-child(odd) {
+      font-weight: bold;
+      text-align: right;
+    }
+  }
+}
+
+.instructions {
+  h1 {
+    font-size: 120%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  h3 {
+    font-size: 80%;
+  }
+}

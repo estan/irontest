@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test-case>
+  <id><%= @test_case.id %></id>
+  <instructions><%= BlueCloth.new(@test_case.instructions).to_html %></instructions>
+  <title><%= @test_case.title %></title>
+  <status><%= @test_case.status %></status>
+  <results>
+  <% @test_case.results.each do |result| %>
+    <result>
+      <id><%= result.id %></id>
+      <date><%= result.created_at %></date>
+      <comment><%= result.comment %></comment>
+      <tester><%= result.tester %></tester>
+      <result><%= result.result %></result>
+    </result>
+  <% end %>
+  </results>
+</test-case>

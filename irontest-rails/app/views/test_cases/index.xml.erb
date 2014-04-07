@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test-cases type="array">
+<% @test_cases.each do |test_case| %>
+  <test-case>
+    <id><%= test_case.id %></id>
+    <instructions><%= BlueCloth.new(test_case.instructions).to_html %></instructions>
+    <title><%= test_case.title %></title>
+    <status><%= test_case.status %></status>
+  </test-case>
+<% end %>
+</test-cases>

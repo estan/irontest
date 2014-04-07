@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @test_case.title %>
+</h1>
+
+<table class="test-case-info">
+  <tr>
+    <td>Product:</td>
+    <td><%= @test_case.product.name %></td>
+    <td>Created:</td>
+    <td><%= l @test_case.created_at, :format => :short_datetime %></td>
+    <td>Updated:</td>
+    <td><%= l @test_case.updated_at, :format => :short_datetime %></td>
+  </tr>
+  <tr>
+    <td>Passed:</td>
+    <td><%= @test_case.passed %></td>
+    <td>Failed:</td>
+    <td><%= @test_case.failed %></td>
+    <td>Status:</td>
+    <td class="<%= @test_case.status.downcase %>"><%= @test_case.status %></td>
+  </tr>
+</table>
+
+<div class="container">
+  <h2>Instructions</h3>
+  <div class="instructions">
+    <%= raw(BlueCloth.new(@test_case.instructions).to_html) %>
+  </div>
+  <div class="bottom-nav">
+    <%= link_to 'Edit', edit_product_test_case_path(@product, @test_case) %>
+  </div>
+</div>
+
+<div class="form-container">
+<h3>New Result</h3>
+<%= render "results/form" %>
+</div>
+
+<div class="container">
+<h3>Test Case History</h3>
+<% if @test_case.results.empty? %>
+  <p>No results.</p>
+<% else %>
+  <%= render "results/index" %>
+<% end %>
+</div>
+
+<div class="bottom-nav">
+  <%= link_to '« Back', product_path(@product) %>
+</div>

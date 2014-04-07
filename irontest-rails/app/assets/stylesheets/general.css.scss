@@ -1,0 +1,165 @@
+body {
+  background-color: #ddd;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #036;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+textarea {
+  width: 95%;
+  height: 15em;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  border: 2px solid #d00;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid #d00;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #eee;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #d00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+#content {
+  background-color: white;
+  border: 1px solid gray;
+  width: 45em;
+  margin: 0 auto 0 auto;
+  padding: 1em;
+}
+
+.inline-edit-img {
+  margin-left: 1ex;
+}
+
+.bottom-nav {
+  margin: 1em 0 0 0;
+  a {
+    padding: 3px 10px;
+    color: white;
+  }
+  a:link,#navigation a:visited {
+    color: white;
+    background-color: #036;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    background-color: #369;
+    text-decoration: none;
+  }
+}
+
+#footer p {
+  font-size: 80%;
+  text-align: center;
+  color: gray;
+}
+
+label {
+  font-weight: bold;
+}
+
+.container {
+  border: 1px solid gray;
+  padding: 1em;
+  margin: 1em 0 1em 0;
+}
+
+.form-container {
+  background-color: #eee;
+  border: 1px solid gray;
+  padding: 1em;
+  margin: 1em 0 1em 0;
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid gray;
+  td {
+    padding: 0.3em;
+  }
+  thead {
+    tr {
+      border-bottom: 1px solid gray;
+      th:first-child {
+        width: 99%;
+      }
+      th {
+        text-align: left;
+        padding: 0.3em;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #eee;
+    }
+    tr:nth-child(even) {
+      background-color: white;
+    }
+    td:nth-child(2) {
+      white-space:nowrap;
+    }
+    td:last-child {
+      white-space:nowrap;
+    }
+  }
+}
+
+.failed {
+  color: red;
+}
+
+.passed {
+  color: green;
+}

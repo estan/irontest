@@ -1,0 +1,21 @@
+<table class="result-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Result</th>
+      <th>Comment</th>
+      <th>Tester</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @test_case.results.each do |r| %>
+    <tr>
+      <td><%= l r.created_at, :format => :short_datetime %></td>
+      <td class="<%= r.result.downcase %>"><%= r.result %></td>
+      <td><%= r.comment.empty? ? 'No comment' : r.comment %></td>
+      <td><%= r.tester %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

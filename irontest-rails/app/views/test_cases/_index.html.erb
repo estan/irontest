@@ -1,0 +1,19 @@
+<table class="item-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @product.test_cases.each do |t| %>
+    <tr>
+      <td><%= link_to t.title, product_test_case_path(@product, t) %></td>
+      <td class="<%= t.status.downcase %>"><%= t.status %></td>
+      <td><%= link_to image_tag('remove.png'), product_test_case_path(@product, t), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

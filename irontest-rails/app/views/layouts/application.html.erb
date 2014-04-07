@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IronTest</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="header">
+    <%= image_tag("logo.png", :id => "logo") %>
+    <ul>
+      <li><%= link_to 'Products', products_path %></li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <%= yield %>
+  </div>
+
+  <div id="footer">
+    <p>Powered by IronTest 1.0</p>
+  </div>
+
+</body>
+</html>

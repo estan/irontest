@@ -1,0 +1,29 @@
+<h1>Products</h1>
+
+<% if @products.empty? %>
+  <p>No products.</p>
+<% else %>
+  <table class="item-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= link_to product.name, product %></td>
+        <td><%= product.passing %> / <%= product.test_cases.count %> passing</td>
+        <td><%= link_to image_tag('remove.png'), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<div class="bottom-nav">
+<%= link_to 'New Product', new_product_path %>
+</div>

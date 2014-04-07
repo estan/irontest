@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1><%= @product.name %></h1>
+
+  <p><%= @product.description %></p>
+  <div class="bottom-nav">
+    <%= link_to 'Edit', edit_product_path(@product) %>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Test Cases</h2>
+  <% if @product.test_cases.empty? %>
+    <p>No test cases.</p>
+  <% else %>
+    <%= render "test_cases/index" %>
+  <% end %>
+</div>
+
+<div class="form-container">
+  <h3>New Test Case</h3>
+  <%= render "test_cases/form" %>
+</div>
+
+<div class="bottom-nav">
+<%= link_to '« Back', products_path %>
+</div>
